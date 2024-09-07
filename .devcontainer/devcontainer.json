@@ -1,9 +1,24 @@
 {
   // Name this configuration
   "name": "Codespace for Skills!",
+  
   // Use the base codespace image
   "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
 
   "remoteUser": "codespace",
-  "overrideCommand": false
+  "overrideCommand": false,
+
+  // Add the customizations for VS Code extensions and opening files
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot"  // Add any other extensions you need here
+      ]
+    },
+    "codespaces": {
+      "openFiles": [
+        "codespace.md"
+      ]
+    }
+  }
 }
